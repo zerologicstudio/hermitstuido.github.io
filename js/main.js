@@ -418,7 +418,38 @@ function throttle(func, limit) {
   };
 }
 
+// ===== Lazy Loading Images with fade-in effect =====
+const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+if ('loading' in HTMLImageElement.prototype) {
+  lazyImages.forEach(img => {
+    img.addEventListener('load', () => {
+      img.classList.add('loaded');
+    });
+    if (img.complete) {
+      img.classList.add('loaded');
+    }
+  });
+} else {
+  // Fallback for older browsers
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src || img.src;
+          img.removeAttribute('loading');
+          img.classList.add('loaded');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    
+    lazyImages.forEach(img => imageObserver.observe(img));
+  }
+}
+
 // ===== Console Welcome =====
 console.log('%cHermit Studio', 'font-size: 24px; font-weight: bold; color: #d4af37;');
-console.log('%cPremium Visual Production', 'font-size: 14px; color: #b0b0b0;');
-console.log('%cWebsite created with excellence', 'font-size: 12px; color: #666;');
+console.log('%cCrafting Visual Excellence', 'font-size: 14px; color: #b0b0b0;');
+console.log('%cPremium Visual Production - Optimized for Performance', 'font-size: 12px; color: #666;');

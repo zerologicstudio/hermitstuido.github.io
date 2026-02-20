@@ -18,7 +18,10 @@
   <!-- Preloader -->
   <div class="preloader" id="preloader">
     <div class="preloader-content">
-      <div class="preloader-logo">Hermit Studio</div>
+      <div class="preloader-logo">
+          Hermit<span>.</span>
+          <span class="preloader-tagline">Crafting Visual Excellence</span>
+        </div>
       <div class="preloader-bar"></div>
     </div>
   </div>
@@ -26,7 +29,10 @@
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo">Hermit<span>.</span></a>
+      <a href="index.html" class="nav-logo">
+          Hermit<span>.</span>
+          <span class="nav-tagline">Crafting Visual Excellence</span>
+        </a>
       
       <ul class="nav-menu" id="nav-menu">
         <li><a href="index.html" class="nav-link">Home</a></li>
@@ -67,7 +73,7 @@
             </div>
             <div>
               <div class="contact-label">Studio Address</div>
-              <div class="contact-value">123 Creative Avenue<br>Los Angeles, CA 90001</div>
+              <div class="contact-value">123 Room<br>Kangayam, Tirupur 600730</div>
             </div>
           </div>
           
@@ -77,7 +83,7 @@
             </div>
             <div>
               <div class="contact-label">Email</div>
-              <div class="contact-value">hello@hermitstudio.com</div>
+              <div class="contact-value">hermitstudioin@gmail.com</div>
             </div>
           </div>
           
@@ -87,7 +93,7 @@
             </div>
             <div>
               <div class="contact-label">Phone</div>
-              <div class="contact-value">+1 (234) 567-890</div>
+              <div class="contact-value">+91 9751576554</div>
             </div>
           </div>
           
@@ -97,7 +103,7 @@
             </div>
             <div>
               <div class="contact-label">Studio Hours</div>
-              <div class="contact-value">Mon - Fri: 9AM - 6PM PST<br>Sat: By Appointment</div>
+              <div class="contact-value">Mon - Fri: 9AM - 6PM IST<br>Sat: By Appointment</div>
             </div>
           </div>
           
@@ -117,7 +123,10 @@
           <!-- Replace YOUR_FORMSPREE_ID below with your actual Formspree form ID -->
           <!-- Get your free form ID at https://formspree.io -->
           <form class="contact-form" id="contact-form" action="https://formspree.io/f/mojnazkk" method="POST">
-            <h3 style="margin-bottom: 1.5rem;">Send Us a Message</h3>
+            <div class="form-header">
+              <h3>Start Your Project</h3>
+              <p>Tell us about your vision and we'll bring it to life</p>
+            </div>
             
             <div class="form-row">
               <div class="form-group">
@@ -137,7 +146,7 @@
               </div>
               <div class="form-group">
                 <label class="form-label" for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (234) 567-890">
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="your mobile number">
               </div>
             </div>
             
@@ -148,8 +157,7 @@
                 <option value="vfx">Visual Effects</option>
                 <option value="commercial">Ad Production</option>
                 <option value="event">Event Coverage</option>
-                <option value="color">Color Grading</option>
-                <option value="motion">Motion Graphics</option>
+                <option value="webdev">Website Development</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -158,12 +166,18 @@
               <label class="form-label" for="budget">Project Budget</label>
               <select id="budget" name="budget" class="form-select">
                 <option value="">Select budget range...</option>
-                <option value="5k-10k">$5,000 - $10,000</option>
-                <option value="10k-25k">$10,000 - $25,000</option>
-                <option value="25k-50k">$25,000 - $50,000</option>
-                <option value="50k-100k">$50,000 - $100,000</option>
-                <option value="100k+">$100,000+</option>
+                <option value="50k-1l">₹50,000 - ₹1,00,000</option>
+                <option value="1l-2.5l">₹1,00,000 - ₹2,50,000</option>
+                <option value="2.5l-5l">₹2,50,000 - ₹5,00,000</option>
+                <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
+                <option value="10l+">₹10,00,000+</option>
+                <option value="custom">Custom Budget</option>
               </select>
+            </div>
+            
+            <div class="form-group" id="custom-budget-group" style="display: none;">
+              <label class="form-label" for="custom-budget">Custom Budget Amount</label>
+              <input type="text" id="custom-budget" name="custom_budget" class="form-input" placeholder="Enter your budget (e.g., ₹3,50,000)">
             </div>
             
             <div class="form-group">
@@ -182,7 +196,7 @@
               <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your project..." required></textarea>
             </div>
             
-            <button type="submit" class="btn btn-primary form-submit btn-large">
+            <button type="submit" class="btn btn-primary form-submit">
               <span>Send Message</span>
               <i class="fas fa-paper-plane"></i>
             </button>
@@ -270,7 +284,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="footer-logo">Hermit<span>.</span></a>
-          <p class="footer-tagline">Premium VFX, Ad Production & Event Coverage Studio crafting visual excellence since 2016.</p>
+          <p class="footer-tagline">Crafting Visual Excellence since 2025.</p>
           <div class="footer-social">
             <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -297,23 +311,22 @@
             <li><a href="services.html" class="footer-link">Visual Effects</a></li>
             <li><a href="services.html" class="footer-link">Ad Production</a></li>
             <li><a href="services.html" class="footer-link">Event Coverage</a></li>
-            <li><a href="services.html" class="footer-link">Color Grading</a></li>
-            <li><a href="services.html" class="footer-link">Motion Graphics</a></li>
+            <li><a href="services.html" class="footer-link">Website Development</a></li>
           </ul>
         </div>
         
         <div class="footer-column">
           <h4 class="footer-title">Contact</h4>
           <ul class="footer-links">
-            <li><a href="mailto:hello@hermitstudio.com" class="footer-link">hello@hermitstudio.com</a></li>
-            <li><a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></li>
-            <li><span class="footer-link">123 Creative Ave<br>Los Angeles, CA 90001</span></li>
+            <li><a href="mailto:hermitstudioin@gmail.com" class="footer-link">hermitstudioin@gmail.com</a></li>
+            <li><a href="tel:+91975156554" class="footer-link">+91 9751576554</a></li>
+            <li><span class="footer-link">123 Room<br>Kangayam, Tirupur 600730</span></li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p class="footer-copyright">&copy; 2024 Hermit Studio. All rights reserved.</p>
+        <p class="footer-copyright">&copy; 2026 Hermit Studio. All rights reserved.</p>
         <div class="footer-legal">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
@@ -408,8 +421,22 @@
         }
       });
     });
+    
+    // Custom Budget Field Toggle
+    const budgetSelect = document.getElementById('budget');
+    const customBudgetGroup = document.getElementById('custom-budget-group');
+    
+    if (budgetSelect && customBudgetGroup) {
+      budgetSelect.addEventListener('change', function() {
+        if (this.value === 'custom') {
+          customBudgetGroup.style.display = 'block';
+        } else {
+          customBudgetGroup.style.display = 'none';
+        }
+      });
+    }
   </script>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
